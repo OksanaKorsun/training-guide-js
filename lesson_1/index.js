@@ -326,11 +326,11 @@ const lemonPrice = 72;
 // 450 покаже 07:30
 // 1441 покаже 24:01
 
-const totalMinutes = 450;
-const hours = Math.floor(totalMinutes / 60);
-const minutes = totalMinutes % 60;
-const result = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`
-console.log(result);
+// const totalMinutes = 450;
+// const hours = Math.floor(totalMinutes / 60);
+// const minutes = totalMinutes % 60;
+// const result = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`
+// console.log(result);
 
 // Task - 3
 
@@ -356,3 +356,184 @@ console.log(result);
 
 // const KEY_AUTHORIZATION = 'qwerty111';
 // console.log(KEY_AUTHORIZATION);
+
+// Приклади циклів
+
+let password = "";
+do {
+  password = prompt("Введіть пароль довший 4-х символів", "");
+} while (password.length < 5);
+
+console.log("Ввели пароль: ", password);
+
+
+
+// let clientCounter = 23;
+// const maxClients = 25;
+
+// while (clientCounter < maxClients) {
+//   console.log(clientCounter);
+//   clientCounter += 1;
+// }
+
+
+// for (let i = 0; i <= 20; i += 5) {
+//   console.log(i);
+// }
+
+
+// const target = 100;
+// let sum = 0;
+
+// for (let i = 0; i <= target; i += 1) {
+//   sum += i;
+// }
+
+// console.log(sum);
+
+// const max = 10;
+// for (let i = 0; i < max; i += 1) {
+//   console.log(`${max} % ${i} = `, max % i);
+// }
+
+// for (let i = 0; i <= 5; i += 1) {
+//   console.log(i);
+
+//   if (i === 3) {
+//     console.log("Знайшли число 3, перериваємо виконання циклу");
+//     break;
+//   }
+// }
+
+// console.log("Лог після циклу");
+
+// const number = 10;
+
+// for (let i = 0; i < number; i += 1) {
+//   if (i % 2 === 0) {
+//     continue;
+//   }
+
+//   console.log("Непарне i: ", i); // 1, 3, 5, 7, 9
+// }
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'jqueryismyjam';
+//   let message;
+
+//   if (password = "") { // Change this line
+//     message =  'Canceled by user!';
+//   } else if (password === ADMIN_PASSWORD) { // Change this line
+//     message = 'Welcome!';
+//   } else {
+//     message = 'Access denied, wrong password!';
+//   }
+
+//   return message;
+// }
+
+// const age = 20;
+// console.log(age > 10 && age < 30);
+// console.log(true && 3); // 3
+
+// function getDiscount(totalSpent) {
+//   const BASE_DISCOUNT = 0;
+//   const BRONZE_DISCOUNT = 0.02;
+//   const SILVER_DISCOUNT = 0.05;
+//   const GOLD_DISCOUNT = 0.1;
+//   let discount;
+//   // Change code below this line
+// if (totalSpent >= 50000) {
+//   discount === GOLD_DISCOUNT;
+// } else if (totalSpent >= 20000 && totalSpent < 50000) {
+//   discount === SILVER_DISCOUNT;
+// } else if (totalSpent >= 5000 && totalSpent < 20000) {
+//   discount === BRONZE_DISCOUNT;
+// } else {
+//   discount === BASE_DISCOUNT;
+// }
+//   // Change code above this line
+//   return discount;
+// }
+
+// const age = 13;
+// const type = age >= 18 ? "adult" : "child";
+// console.log(type); // "adult"
+
+// let cost;
+// const subscription = "premium";
+
+// switch (subscription) {
+//   case "free":
+//     cost = 0;
+//     break;
+
+//   case "pro":
+//     cost = 100;
+//     break;
+
+//   case "premium":
+//     cost = 500;
+//     break;
+
+//   default:
+//     console.log("Invalid subscription type");
+// }
+// console.log(cost);
+
+function formatMessage(message, maxLength) {
+  let result;
+  
+if (message.length <= maxLength) {
+  result = message;
+} else {
+  result = message.slice(0, maxLength) + "...";
+}
+    return result;
+}
+formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
+console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15));
+
+function add(a, b, c) {
+  // Change code below this line
+
+return a + b + c;
+
+  // Change code above this line
+}
+
+add(2, 5, 8); // 15
+
+console.log(add(15, 27, 10));
+console.log(add(10, 20, 30));
+console.log(add(5, 10, 15));
+
+
+let cost;
+const subscription = "pro";
+
+switch (subscription) {
+  case "free":
+    cost = 0;
+    break;
+
+  case "pro":
+    cost = 100;
+    break;
+
+  case "premium":
+    cost = 500;
+    break;
+
+  default:
+    console.log("Invalid subscription type");
+}
+
+console.log(cost); // 500
+
+let counter = 0;
+
+while (counter < 10) {
+  console.log("counter: ", counter);
+  counter += 1;
+}

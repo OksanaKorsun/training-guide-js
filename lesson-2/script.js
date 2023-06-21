@@ -37,7 +37,8 @@
 
 
 
-/***** Інструкція switch *****/
+/***** Інструкція switch  використовується щоб порівняти рядок з рядком або число з числом; 
+ * орієнтована на строге порівняння; доволі швидка інструкція *****/ 
 // const value = 4;
 
 // switch (value) {
@@ -95,7 +96,7 @@
 // console.log(message);
 
 
-/***** Області видимості *****/ //(Обов'язково !!!)
+/***** Області видимості *****/ //(Обов'язково !!! JS завжди виконується в 2 етапи: 1) етап ініціалізації 2) виконання коду)
 
 // Глобальна та локальна
 // const
@@ -186,16 +187,16 @@
 
 /***** Цикл for *****/
 
-// let i;
-// const str = 'hello world';
-// for (let i = 0; i < str.length; i += 1) {
-//     console.log(str[i]);
-// }
+let i;
+const str = 'hello world';
+for (let i = 0; i < str.length; i += 1) {
+    console.log(str[i]);
+}
 
 
 
 
-/***** Цикл while *****/
+/***** Цикл while потрібно слідкуавти за умовою, якщо у вайлі умовою буде тру - комютер зависне *****/
 // const str = 'hello world';
 // let i = 0;
 // while (i < str.length) {
@@ -425,3 +426,13 @@ function countVowel(str) {
 }
 console.log(countVowel("HELLO WORLD")) // 3
 // console.log(countVowel("Junior Web Developer")) // 8
+
+
+function checkAge(age) {
+  if (age >= 18) { // Change this line
+    return "You are an adult";
+  } 
+  return "You are a minor";
+}
+checkAge(8);
+console.log(checkAge(8));
