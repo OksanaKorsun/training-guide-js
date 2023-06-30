@@ -163,18 +163,18 @@
 // Task-1
 // Напиши скрипт який буде перебирати масив та видаляти з нього (мутувати) всі елементи що не є типом даних Number.
 
-// const arrA = [3, 'Hello', null, 42, false];
+const arrA = [3, 'Hello', null, 42, false];
 
 
-// console.log(typeof null);
-// for (let i = 0; i < arrA.length; i += 1) {
-//     if (typeof arrA[i] !== 'number') {
-//         arrA.splice(i, 1);
-//         i -= 1;
-//     }
-// }
+console.log(typeof null);
+for (let i = 0; i < arrA.length; i += 1) {
+    if (typeof arrA[i] !== 'number') {
+        arrA.splice(i, 1);
+        i -= 1;
+    }
+}
 
-// console.log(arrA);
+console.log(arrA);
 
 // const arrA = [3, 'Hello', null, 42, false];
 
@@ -372,11 +372,11 @@ for (const character of string) {
 
 // console.log(numbers.length);
 
+
 // const numbers = ["Lviv", "Brovary", "Kyiv", "Svitilnya"];
 // for (const number of numbers) {
-//     console.log(market);
+//     console.log(number);
 // }
-
 
 
 // const name = "Mango";
@@ -409,19 +409,204 @@ for (const character of string) {
 
 
 
-const numbers = [];
+// const numbers = [];
 
-numbers.push(1);
-console.log(numbers); // [1]
+// numbers.push(1);
+// console.log(numbers); // [1]
 
-numbers.push(2);
-console.log(numbers); // [1, 2]
+// numbers.push(2);
+// console.log(numbers); // [1, 2]
 
-numbers.push(3);
-console.log(numbers); // [1, 2, 3]
+// numbers.push(3);
+// console.log(numbers); // [1, 2, 3]
 
-numbers.push(4);
-console.log(numbers); // [1, 2, 3, 4]
+// numbers.push(4);
+// console.log(numbers); // [1, 2, 3, 4]
 
-numbers.push(5);
-console.log(numbers); // [1, 2, 3, 4, 5]
+// numbers.push(5);
+// console.log(numbers); // [1, 2, 3, 4, 5]
+
+
+// function getExtremeElements(array) {
+   
+//   const firstElement = array[0];
+//   const lastElement = array[array.length - 1];
+//   return [firstElement, lastElement];
+// }
+
+
+// getExtremeElements([1, 5, 6, 8, 3, 1]);
+
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//    // Change code below this line
+//   let totalPrice;
+//   totalPrice = message.length * pricePerWord;
+//   return totalPrice;
+//    // Change code above this line
+// }
+// calculateEngravingPrice('JavaScript is in my blood', 10);
+
+// function slugify(title) {
+
+// return title.toLowerCase().split(" ").join("-");
+
+// }
+// slugify('Arrays for begginers');
+// console.log(slugify('Arrays for begginers'));
+
+
+
+// function makeArray(firstArray, secondArray, maxLength) {
+   
+// let newArray = firstArray.concat(secondArray);
+// if (newArray.length > maxLength) {
+//     return newArray.slice(0, maxLength);
+// }
+//  return newArray;
+// }
+// makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3);
+// console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3));
+
+
+// Області видимості
+let product = "banana";
+function getProduct(qwerty) {
+    qwerty = "chery";
+    if (true) {
+        let product = "kiwi";
+        if (true) {
+            product = "pear";
+        }
+        console.log("Перший консоль", product);
+    }
+    product = "creaм";
+}
+getProduct(product);
+console.log("Другий консоль", product);
+
+
+// function calculateTotal(number) {
+ 
+// let sum = 0;
+//     for (let i = 1; i <= number; i += 1) {
+//  sum += i;
+// }
+//  return sum;    
+// }
+// calculateTotal(3);
+
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+// for (let i = min; i <= max; i += 1) {
+//   numbers.push(i);
+// }
+//   // Change code above this line
+//   return numbers;
+// }
+// createArrayOfNumbers(1, 3);
+// createArrayOfNumbers(14, 17);
+// console.log(createArrayOfNumbers(1, 17));
+
+
+
+// function filterArray(numbers, value) {
+//    // Change code below this line
+// const newNumbers = [];
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] > value) {
+//       newNumbers.push(numbers[i]);
+//     }
+//   }
+
+// return newNumbers;
+//   // Change code above this line
+// }
+// filterArray([12, 24, 8, 41, 76], 20);
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+
+
+// function checkFruit(fruit) {
+//   const fruits = ["apple", "plum", "pear", "orange"];
+//   if (fruits.includes(fruit)) {
+//       return true;
+    
+//   }
+//   return false; // Change this line
+// }
+// checkFruit("banana");
+// console.log(checkFruit("banana"));
+
+
+
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+// const commonArray = [];
+//     for (let i = 0; i < array1.length; i += 1) {
+//         for (let j = 0; j < array2.length; j += 1) {
+//             if (array1[i] === array2[j]) {
+//                 commonArray.push(array1[i])
+      
+//             }
+//         }
+//     }
+// return commonArray;
+//  // Change code above this line
+// }
+
+
+
+
+
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+// const commonArray = [];
+//   for (let i = 0; i < array1.length; i += 1) {
+    
+//       if (array2.includes(array1[i])) {
+//         commonArray.push(array1[i])
+      
+//     }
+//   }
+
+// return commonArray;
+//  // Change code above this line
+// }
+// getCommonElements([24, 12, 27, 5], [24, 8, 5, 36, 27]);
+// console.log(getCommonElements([24, 12, 27, 5], [24, 8, 5, 36, 27]));
+
+
+// function getEvenNumbers(start, end) {
+//    // Change code below this line
+// const numbers = [];
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       numbers.push(i);
+//     }
+//   }
+// return numbers;
+
+//     // Change code above this line
+// }
+// getEvenNumbers(3, 11);
+// console.log(getEvenNumbers(3, 11));
+
+
+// function includes(array, value) {
+//   // Change code below this line
+//     for (let i = 0; i < array.length; i += 1) {
+//         if (array[i] === value) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+//   // Change code above this line
+
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "wer");
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "wer"));
+
+
+// Прочитати learn JS!!!!!!
