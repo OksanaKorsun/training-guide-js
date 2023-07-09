@@ -235,7 +235,7 @@
 
 
 
-
+// Call Stack що це????!!!!!
 
 // function logItem(valA, valB) {
 //     const result = getSum(valA, valB);
@@ -246,7 +246,9 @@
 // function getSum(a, b) {
 //     return a + b
 // }
+ 
 
+// while true - кладе машину користувача
 
 // logItem(5, 7)
 
@@ -344,7 +346,9 @@
 // console.log(getCombination(data, 3));
 // console.log(getCombination(data, 1));
 
-// Example 3 - Площа прямокутника
+
+// Task-3 - Площа прямокутника
+
 // Напиши функцію getRectArea(dimensions) для обчислення площі прямокутника зі сторонами, значення яких будуть передані до параметра dimensions у вигляді рядка. Значення гарантовано розділені пробілом.
 
 // function getRectArea(dimensions) {
@@ -357,6 +361,8 @@
 
 // console.log(getRectArea('8 11'));
 // console.log(getRectArea('15 11'));
+
+
 // Task-4
 // Напишіть функції для роботи з колекцією навчальних курсів courses:
 
@@ -382,7 +388,7 @@
 //     const idx = courses.indexOf(name);
 //     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT
 
-//     console.log('~', ~-1); // 0
+//     console.log('~', ~-1); // 0      Тільда
 //     console.log(-(-1 + 1)); // 0
 //     // -(x + 1)
 //     // -1 => true => 0 => false
@@ -415,41 +421,12 @@ function updateCourse(oldName, newName) {
 
 
 
-// updateCourse('HTML', 'NestJS');
+updateCourse('HTML', 'NestJS');
+console.log(updateCourse('HTML', 'NestJS'));
 // console.log(updateCourse('qwerty', 'NestJS'));
-// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
 
 
-// function multiply() {
-//   // Тіло функції
-//   console.log("Це лог на момент виклику функції multiply");
-// }
-
-// // 2. Виклики функції multiply
-// multiply(); 
-// multiply(); // 'Це лог на момент виклику функції multiply'
-// multiply();
-
-// function count(countFrom = 0, countTo = 10, step = 1) {
-//   console.log(`countFrom = ${countFrom}, countTo = ${countTo}, step = ${step}`);
-
-//   for (let i = countFrom; i <= countTo; i += step) {
-//     console.log(i);
-//   }
-// }
-// count(2, 20, 5);
 
 
-// function multiply() {
-//   let total = 1;
-
-//   for (const argument of arguments) {
-//     total *= argument;
-//   }
-
-//   return total;
-// }
-
-// console.log(multiply(1, 2, 3)); //  6
-// console.log(multiply(1, 2, 3, 4)); //  24
-// console.log(multiply(1, 2, 3, 4, 5)); //  120
+// Патерн Singlton!!!!!!????

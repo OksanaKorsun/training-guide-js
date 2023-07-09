@@ -424,6 +424,135 @@
 // }
 // console.log(sum(numbers));
 
+// function multiply(firstNumber, secondNumber, ...otherArgs) {
+//   console.log(firstNumber); // Значення першого аргументу
+//   console.log(secondNumber); // Значення другого аргументу
+//   console.log(otherArgs); // Масив інших аргументів
+// }
+
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+// for (const color of colors) {
+//   const {hex, rgb} = color;
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+  
+// function add(...args) {
+//   let result = 0;
+//   for (const arg of args) {
+//     result += arg;
+    
+//   }
+//    return result;
+//   // Change code above this line
+// }
+// add(15, 17);
+// console.log(add(15, 17));
+
+
+// function multiply(firstNumber, secondNumber, ...otherArgs) {
+//   console.log(firstNumber); // Значення першого аргументу
+//   console.log(secondNumber); // Значення другого аргументу
+//   console.log(otherArgs); // Масив інших аргументів
+// }
+
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+
+
+// function addOverNum(firstArg, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     if (arg > firstArg){
+//     total += arg;
+//   }
+//   }
+
+//   return total;
+//   // Change code above this line
+// }
+// addOverNum(50, 15, 57);
+// console.log(addOverNum(50, 15, 57));
 
 
 
+// function findMatches(firstArg, ...args) {
+//   const matches = []; // Don't change this line
+// for (const arg of args) {
+//   if (firstArg.includes(arg)) {
+//     matches.push(arg)
+//   }
+// }
+//   // Change code above this line
+//   return matches;
+// }
+// findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7);
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+    getPotions() {
+            return this.potions;
+    },
+    
+    addPotion(newPotion) {
+        for (const potion of this.potions) {
+            if (potion.name === newPotion.name) {
+                return `Error! Potion ${newPotion.name} is already in your inventory!`;
+            }
+        }
+    return this.potions.push(newPotion);
+  },
+    removePotion(potionName) {
+        for (let i = 0; i < this.potions.length; i += 1) {
+            if (this.potions[i].name === potionName) {
+                return this.potions.splice(i, 1); 
+            }
+        }
+        return this.potions;
+  },
+    updatePotionName(oldName, newName) {
+        for (const potion of this.potions) {
+
+            if (potion.name === oldName) {
+                 return potion.name = newName;
+            }
+        }
+        return this.potions;
+  },
+  // Change code above this line
+};
+// atTheOldToad.getPotions();
+// console.log(atTheOldToad.getPotions());
+// atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion");
+// console.log(atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"));
+atTheOldToad.addPotion({ name: "Power potion", price: 270 });
+console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
+
+// atTheOldToad.removePotion("Dragon breath");
+// console.log(atTheOldToad.removePotion("Dragon breath"));

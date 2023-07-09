@@ -163,18 +163,18 @@
 // Task-1
 // Напиши скрипт який буде перебирати масив та видаляти з нього (мутувати) всі елементи що не є типом даних Number.
 
-const arrA = [3, 'Hello', null, 42, false];
+// const arrA = [3, 'Hello', null, 42, false];
 
 
-console.log(typeof null);
-for (let i = 0; i < arrA.length; i += 1) {
-    if (typeof arrA[i] !== 'number') {
-        arrA.splice(i, 1);
-        i -= 1;
-    }
-}
+// console.log(typeof null);
+// for (let i = 0; i < arrA.length; i += 1) {
+//     if (typeof arrA[i] !== 'number') {
+//         arrA.splice(i, 1);
+//         i -= 1;
+//     }
+// }
 
-console.log(arrA);
+// console.log(arrA);
 
 // const arrA = [3, 'Hello', null, 42, false];
 
@@ -291,32 +291,32 @@ console.log(arrA);
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 
 
-function createStr(arr) {
-    let message;
-    switch (arr.length) {
-        case 0:
-            message = "no one likes this"
-            break;
-        case 1:
-            message = `${arr[0]} likes this`
-            break;
-        case 2:
-            message = `${arr[0]} and ${arr[1]} like this`
-            break;
-        case 3:
-            message = `${arr[0]}, ${arr[1]} and ${arr[2]} like this`
-            break;
-        default:
-            message = `${arr[0]}, ${arr[1]} and ${arr.length - 2} others like this`
-    }
-    return message;
-}
+// function createStr(arr) {
+//     let message;
+//     switch (arr.length) {
+//         case 0:
+//             message = "no one likes this"
+//             break;
+//         case 1:
+//             message = `${arr[0]} likes this`
+//             break;
+//         case 2:
+//             message = `${arr[0]} and ${arr[1]} like this`
+//             break;
+//         case 3:
+//             message = `${arr[0]}, ${arr[1]} and ${arr[2]} like this`
+//             break;
+//         default:
+//             message = `${arr[0]}, ${arr[1]} and ${arr.length - 2} others like this`
+//     }
+//     return message;
+// }
 
-console.log(createStr([]));
-console.log(createStr(["Peter"]));
-console.log(createStr(["Jacob", "Alex"]));
-console.log(createStr(["Max", "John", "Mark"]));
-console.log(createStr(["Mark", "Alex", "Jacob", "Mark"]));
+// console.log(createStr([]));
+// console.log(createStr(["Peter"]));
+// console.log(createStr(["Jacob", "Alex"]));
+// console.log(createStr(["Max", "John", "Mark"]));
+// console.log(createStr(["Mark", "Alex", "Jacob", "Mark"]));
 
 // ітерація масива приклад
 // const clients = ["Mango", "Ajax", "Poly"];
@@ -325,17 +325,17 @@ console.log(createStr(["Mark", "Alex", "Jacob", "Mark"]));
 //   console.log(clients[i]);
 // }
 
-const clients = ["Mango", "Ajax", "Poly"];
+// const clients = ["Mango", "Ajax", "Poly"];
 
-for (const client of clients) {
-  console.log(client);
-}
+// for (const client of clients) {
+//   console.log(client);
+// }
 
-const string = "javascript";
+// const string = "javascript";
 
-for (const character of string) {
-  console.log(character);
-}
+// for (const character of string) {
+//   console.log(character);
+// }
 
 
 // const clients = ["Mango", "Poly", "Ajax"];
