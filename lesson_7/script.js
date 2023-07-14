@@ -329,3 +329,64 @@
 // console.log(a);
 // console.log(a[b])
 // чому в результаті в консолі буде 456 ? і що скажете на рахунок цієї доки https://uk.javascript.info/ , чи краше читати тільки mdn?
+   
+
+
+
+
+// function processCall(recipient) {
+//   // Імітуємо доступність абонента випадковим числом
+//   const isRecipientAvailable = Math.random() > 0.5;
+
+//   if (!isRecipientAvailable) {
+//     console.log(`Абонент ${recipient} недоступний, залиште повідомлення.`);
+//     // Логіка активації автовідповідача
+//   } else {
+//     console.log(`З'єднуємо з ${recipient}, очікуйте...`);
+//     // Логіка прийняття дзвінка
+//   }
+// }
+
+// processCall("Манго");
+// processCall("Liza");
+// processCall("Ksusha");
+
+
+
+// function repeatLog(n) {
+//   for (let i = 0; i < n; i += 1) {
+//     console.log(i);
+//   }
+// }
+
+// repeatLog(5);
+
+function processCall(recipient, onAvailable, onNotAvailable) {
+  // Імітуємо доступність абонента випадковим числом
+  const isRecipientAvailable = Math.random() > 0.5;
+
+  if (!isRecipientAvailable) {
+    onNotAvailable(recipient);
+    return;
+  }
+
+  onAvailable(recipient);
+}
+
+function takeCall(name) {
+  console.log(`З'єднуємо з ${name}, очікуйте...`);
+  // Логіка прийняття дзвінка
+}
+
+function activateAnsweringMachine(name) {
+  console.log(`Абонент ${name} недоступний, залиште повідомлення.`);
+  // Логіка активації автовідповідача
+}
+
+function leaveHoloMessage(name) {
+  console.log(`Абонент ${name} недоступний, записуємо голограму.`);
+  // Логіка запису голограми
+}
+
+processCall("Mango", takeCall, activateAnsweringMachine);
+processCall("Poly", takeCall, leaveHoloMessage);
