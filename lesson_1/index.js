@@ -50,13 +50,14 @@
 // console.log('result', 10 + 15); використовується на етапі розробки, має бути відсутнім в девтулзах
 // console.log('result', 10 + 15);
 // console.log('result', 10 + 15);
-// alert('Привіт вчи JS') тільки ОК
+// alert('Привіт вчи JS'); тільки ОК
 
 // const message = prompt("Введіть і'мя")
-// console.log(message); Введення даних від користувача
+// console.log(message);
+//  Введення даних від користувача
 
 // const result = confirm('Будеш вчити JS ?');
-// console.log(result); ОК або Cancel
+// console.log(result); // ОК або Cancel
 
 /***** Основні оператори *****/
 
@@ -107,15 +108,16 @@
 
 //  0 (число нуль)
 // console.log(Boolean(0));
-// // "" (порожній рядок)
+// // // "" (порожній рядок)
 // console.log(Boolean(''));
-// // NaN
-// console.log(Boolean(NaN)); NaN не дорівнює NaN
-// // undefined
+// // // NaN
+// console.log(Boolean(NaN));
+// // NaN не дорівнює NaN
+// // // undefined
 // console.log(Boolean(undefined));
-// // null
+// // // null
 // console.log(Boolean(null));
-// // false
+// // // false
 // console.log(Boolean(false));
 
 /***** Логічні оператори (в логічних операторах немає порівняння по юнікоду)*****/
@@ -140,10 +142,10 @@
 
 // ?? реагує лише на null undefined, оператор нульового порівняння
 
-// console.log(0 ?? 1);
-// console.log(false ?? 0);
-// console.log(null ?? 1);
-// console.log(undefined ?? 10);
+console.log(0 ?? 1);
+console.log(false ?? 0);
+console.log(null ?? 1);
+console.log(undefined ?? 10);
 
 // let qty; //undefined
 
@@ -176,13 +178,13 @@
 
 // console.log(null || 2 || undefined);
 
-// console.log('' ??  4);
+console.log("" ?? 4);
 
-// console.log(false ?? 7);
+console.log(false ?? 7);
 
-// console.log(null ?? 7);
+console.log(null ?? 7);
 
-// console.log(undefined ?? 7);
+console.log(undefined ?? 7);
 
 /***** Математичні оператори *****/
 
@@ -219,14 +221,14 @@
 // Number.parseInt() відібрати ціле число, або до крапки, або до моменту що не являється числом
 
 // console.log(Number.parseInt(str));
-// Number.parseFloat() відбирається все те, що приводиться до числа і якщо зустрічається елемент, 
+// Number.parseFloat() відбирається все те, що приводиться до числа і якщо зустрічається елемент,
 // який не може бути приведений до числа ми одразу пририваємо виконання
 // console.log(Number.parseFloat(str));
 // Number.isNaN() нічого самостійно не перетворює, фактично дивиться чи йому прийшов NaN
-//   та метод isNaN() спочатку робить конвертацію до числа 
+//   та метод isNaN() спочатку робить конвертацію до числа
 // const num = Number(str) // NaN
-// console.log(Number.isNaN(num)); 
-// console.log(isNaN(num));  
+// console.log(Number.isNaN(num));
+// console.log(isNaN(num));
 // console.log('=====================================');
 
 // const str = '25.7a32px';
@@ -289,22 +291,22 @@
 
 // Виконавши математичні операції та застосувавши шаблоні рядки виведи в консоль загальну кількість та ціну за кожен продукт та за всі продукти в кошику
 
-const apple = "🍎";
+// const apple = "🍎";
 
-const appleQuantity = 8;
+// const appleQuantity = 8;
 
-const applePrice = 34;
+// const applePrice = 34;
 
 // const  appleMessage = `${apple} total cost ${appleQuantity * applePrice}`
 // console.log(appleMessage);
-const lemon = "🍋";
+// const lemon = "🍋";
 
-const lemonQuantity = 3;
+// const lemonQuantity = 3;
 
-const lemonPrice = 72;
+// const lemonPrice = 72;
 
-// const lemonMessage = lemon + ' total cost ' + (lemonQuantity + lemonPrice)
-// console.log(lemonMessage);
+// // const lemonMessage = lemon + ' total cost ' + (lemonQuantity + lemonPrice)
+// // console.log(lemonMessage);
 // const cherry = '🍒';
 
 // const cherryQuantity = 3;
@@ -359,14 +361,12 @@ const lemonPrice = 72;
 
 // Приклади циклів
 
-let password = "";
-do {
-  password = prompt("Введіть пароль довший 4-х символів", "");
-} while (password.length < 5);
+// let password = "";
+// do {
+//   password = prompt("Введіть пароль довший 4-х символів", "");
+// } while (password.length < 5);
 
-console.log("Ввели пароль: ", password);
-
-
+// console.log("Ввели пароль: ", password);
 
 // let clientCounter = 23;
 // const maxClients = 25;
@@ -376,11 +376,9 @@ console.log("Ввели пароль: ", password);
 //   clientCounter += 1;
 // }
 
-
 // for (let i = 0; i <= 20; i += 5) {
 //   console.log(i);
 // }
-
 
 // const target = 100;
 // let sum = 0;
@@ -481,59 +479,72 @@ console.log("Ввели пароль: ", password);
 // }
 // console.log(cost);
 
-function formatMessage(message, maxLength) {
-  let result;
-  
-if (message.length <= maxLength) {
-  result = message;
-} else {
-  result = message.slice(0, maxLength) + "...";
-}
-    return result;
-}
-formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
-console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15));
+// function formatMessage(message, maxLength) {
+//   let result;
 
-function add(a, b, c) {
-  // Change code below this line
+// if (message.length <= maxLength) {
+//   result = message;
+// } else {
+//   result = message.slice(0, maxLength) + "...";
+// }
+//     return result;
+// }
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
+// console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15));
 
-return a + b + c;
+// function add(a, b, c) {
+//   // Change code below this line
 
-  // Change code above this line
-}
+// return a + b + c;
 
-add(2, 5, 8); // 15
+//   // Change code above this line
+// }
 
-console.log(add(15, 27, 10));
-console.log(add(10, 20, 30));
-console.log(add(5, 10, 15));
+// add(2, 5, 8); // 15
 
+// console.log(add(15, 27, 10));
+// console.log(add(10, 20, 30));
+// console.log(add(5, 10, 15));
 
-let cost;
-const subscription = "pro";
+// let cost;
+// const subscription = "pro";
 
-switch (subscription) {
-  case "free":
-    cost = 0;
-    break;
+// switch (subscription) {
+//   case "free":
+//     cost = 0;
+//     break;
 
-  case "pro":
-    cost = 100;
-    break;
+//   case "pro":
+//     cost = 100;
+//     break;
 
-  case "premium":
-    cost = 500;
-    break;
+//   case "premium":
+//     cost = 500;
+//     break;
 
-  default:
-    console.log("Invalid subscription type");
-}
+//   default:
+//     console.log("Invalid subscription type");
+// }
 
-console.log(cost); // 500
+// console.log(cost); // 500
 
-let counter = 0;
+// let counter = 0;
 
-while (counter < 10) {
-  console.log("counter: ", counter);
-  counter += 1;
-}
+// while (counter < 10) {
+//   console.log("counter: ", counter);
+//   counter += 1;
+// }
+
+// let inputValue = null;
+
+// console.log(typeof inputValue); // "object"
+
+// console.log(0.17 + 0.24); // 0.41000000000000003
+// console.log((0.17 + 0.24).toFixed(2)); // 0.41
+
+// console.log(Math.max(20, 10, 50, 40));
+
+// console.log(Math.pow(3, 4));
+
+// const age = 20;
+// console.log(age > 10 && age < 30);
