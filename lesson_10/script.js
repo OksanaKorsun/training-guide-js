@@ -320,3 +320,7 @@ const bloodseker6 = new Hero('Bloodseker');
 console.log(bloodseker.heal());
 console.log(bloodseker);
 console.log(Hero.counter);
+
+
+
+// Codewars Практика!!!!!

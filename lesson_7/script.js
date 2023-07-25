@@ -9,21 +9,16 @@
 // }
 // arrow()
 
-
 // function sum(a, b) {
 //     return a + b;
 // }
 // console.log(sum(5, 6));
 
-
 // const sum = (a, b) =>  a + b
 // console.log(sum(5, 6));
 
-
 // const sum = a =>  a + 6
 // console.log(sum(5));
-
-
 
 // const foo = (...args) => {
 //     // console.log(arguments);
@@ -31,8 +26,6 @@
 // }
 
 // foo(1, 2, 3, 4, 5, 6)
-
-
 
 // const user = {
 //     name: 'Test user',
@@ -45,29 +38,19 @@
 // }
 // user.getName()
 
-
-
 // const foo = array => console.log(array);
 
 // foo([1, 2, 3, 4])
 // foo(['a', 'b', 'c'])
 
-
-
 // Callback function
-
-
 
 // function add(a, b) {
 //     return a + b
 // }
 
-
 // console.log(add(5, 5));
 // console.log(add);
-
-
-
 
 // function logResult(a, b, callback) {
 //     console.log(callback);
@@ -81,7 +64,6 @@
 // logResult(4, 5, add)
 // logResult(4, 5, sum)
 
-
 // // callback function
 // function add(a, b) {
 //     return a + b
@@ -91,20 +73,11 @@
 //     return a * b;
 // }
 
-
-
-
-
-
-
-
-
-
-// forEach
+// forEach ніколи нічого не повертає, навіть якщо присвоїти його результат в змінну і поставити ретьорн
 
 // const arr = [1, 2, 3, 4, 5];
 
-// // function 
+// // function
 
 // const array = {
 //     customForEach(arr, callback) {
@@ -130,39 +103,16 @@
 
 // console.log(arr);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Task - 1
 // Створи стрілочну функцію logItems(), яка виводить в консоль елементи масива, зроби перебір за допомогою методу forEach().
 
-
+// const logItems = arr => arr.forEach((item, idx) => console.log(`${idx + 1} - ${item}`));
 
 // const logItems = arr => arr.forEach((item, idx)=> console.log(`${idx + 1} - ${item}`))
 
-
-
-// // logItems(['Mango', 'Poly', 'Ajax']);
+// logItems(['Mango', 'Poly', 'Ajax']);
 // logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
-
-
+// console.log(logItems(['Mango', 'Poly', 'Ajax'])); результат undefined
 
 // Task - 2
 // Напишіть наступні функції:
@@ -190,10 +140,6 @@
 // createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
 // createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
 
-
-
-
-
 // Task - 3
 // Напишіть функцію яка буде отримувати 2 параметри.
 // 1 - масив чисел.
@@ -216,8 +162,6 @@
 // console.log(each([64, 49, 36, 25, 16], value => value - 10));
 // console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], value => Math.ceil(value)));
 // console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], value => Math.floor(value)));
-
-
 
 // Task-4
 // Напишіть функцію getProductDetails, яка приймає ідентифікатор товару productId та дві колбек-функції successCallback та errorCallback. Функція getProductDetails повинна отримати деталі про вказаний товар та передати їх у successCallback.  У випадку помилки, викликається errorCallback і передається повідомлення про помилку.
@@ -263,12 +207,7 @@
 //     console.log(`❌ Error! Product with ${productId} id not found`);
 // }
 
-
-
-
-
-
-// const arr = [1, 2, [5, 6, [2, 2]]];
+// const arr = [1, 2, [5, 6, [2, 2]]]; рекурсивна функція
 // [1, 2]; // 18
 // [5, 6]; //15
 // [2, 2]; //4
@@ -286,8 +225,6 @@
 // }
 
 // console.log(add(arr));
-
-
 
 // const arr = [1, 2, [5, 'hello', 6, [2, 'world', { a: 22, b: 25 }, 2]]];
 // [1, 2]; // 18
@@ -311,10 +248,6 @@
 
 // console.log(add(arr));
 
-
-
-
-
 // чи можна буде буль ласка розглянути цю задачу(знайшов в інтернеті і був впевнений що відповідь буде 123)
 // const a = {}
 // const b = {
@@ -329,10 +262,6 @@
 // console.log(a);
 // console.log(a[b])
 // чому в результаті в консолі буде 456 ? і що скажете на рахунок цієї доки https://uk.javascript.info/ , чи краше читати тільки mdn?
-   
-
-
-
 
 // function processCall(recipient) {
 //   // Імітуємо доступність абонента випадковим числом
@@ -351,8 +280,6 @@
 // processCall("Liza");
 // processCall("Ksusha");
 
-
-
 // function repeatLog(n) {
 //   for (let i = 0; i < n; i += 1) {
 //     console.log(i);
@@ -361,32 +288,91 @@
 
 // repeatLog(5);
 
-function processCall(recipient, onAvailable, onNotAvailable) {
-  // Імітуємо доступність абонента випадковим числом
-  const isRecipientAvailable = Math.random() > 0.5;
+// function processCall(recipient, onAvailable, onNotAvailable) {
+//   // Імітуємо доступність абонента випадковим числом
+//   const isRecipientAvailable = Math.random() > 0.5;
 
-  if (!isRecipientAvailable) {
-    onNotAvailable(recipient);
-    return;
-  }
+//   if (!isRecipientAvailable) {
+//     onNotAvailable(recipient);
+//     return;
+//   }
 
-  onAvailable(recipient);
-}
+//   onAvailable(recipient);
+// }
 
-function takeCall(name) {
-  console.log(`З'єднуємо з ${name}, очікуйте...`);
-  // Логіка прийняття дзвінка
-}
+// function takeCall(name) {
+//   console.log(`З'єднуємо з ${name}, очікуйте...`);
+//   // Логіка прийняття дзвінка
+// }
 
-function activateAnsweringMachine(name) {
-  console.log(`Абонент ${name} недоступний, залиште повідомлення.`);
-  // Логіка активації автовідповідача
-}
+// function activateAnsweringMachine(name) {
+//   console.log(`Абонент ${name} недоступний, залиште повідомлення.`);
+//   // Логіка активації автовідповідача
+// }
 
-function leaveHoloMessage(name) {
-  console.log(`Абонент ${name} недоступний, записуємо голограму.`);
-  // Логіка запису голограми
-}
+// function leaveHoloMessage(name) {
+//   console.log(`Абонент ${name} недоступний, записуємо голограму.`);
+//   // Логіка запису голограми
+// }
 
-processCall("Mango", takeCall, activateAnsweringMachine);
-processCall("Poly", takeCall, leaveHoloMessage);
+// processCall("Mango", takeCall, activateAnsweringMachine);
+// processCall("Poly", takeCall, leaveHoloMessage);
+
+// console.log(processCall("Mango", takeCall, activateAnsweringMachine));
+// console.log(processCall("Poly", takeCall, leaveHoloMessage));
+// // const isRecipientAvailable = Math.random() > 0.5;
+// //   console.log(isRecipientAvailable);
+
+// const values = ["qw", "we", "er", "rt", "ty"];
+// values.forEach(function (value, index) {
+//   console.log(`${value} - ${index}`);
+// })
+
+// const arrowAdd = (a, b, c) => {
+//   return a + b + c;
+// }
+// const add = a => {
+//   return a + 5;
+// }
+// const multiply = () => {
+//   console.log(object);
+// }
+
+// const plusValues = a => a + 5;
+// const foo = (...arg) => {
+//   console.log(arg);
+// }
+// foo(1, 2, 3, 4, 5);
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// Оголошення функції
+// numbers.forEach(function (number, index) {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+
+// // Анонімна стрілочна функція
+// numbers.forEach((number, index) => {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+
+// const logMessage = (number, index) => {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// };
+
+// numbers.forEach(logMessage);
+
+// const numbers = [1, 2, 3, 4, 5];
+// // const filteredNumbers = [];
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] > 3) {
+//     filteredNumbers.push(numbers[i]);
+//   }
+// }
+
+// console.log(filteredNumbers); // [4, 5]
+
+// const filteredNumbers = numbers.filter((value) => value > 3);
+// console.log(filteredNumbers);
+// Hoisting  - це поведінка всплиття значення

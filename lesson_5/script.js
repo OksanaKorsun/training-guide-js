@@ -817,7 +817,36 @@
 // console.log(Math.max(...temps)); // 25
 
 
-const lastWeekTemps = [14, 23, 11];
-const currentWeekTemps = [23, 17, 18];
-const allTemps = [...lastWeekTemps, ...currentWeekTemps];
-console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+// const lastWeekTemps = [14, 23, 11];
+// const currentWeekTemps = [23, 17, 18];
+// const allTemps = [...lastWeekTemps, ...currentWeekTemps];
+// console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+
+
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "На березі спокійних вод",
+    author: "Роберт Шеклі",
+    rating: 8.51,
+  },
+  {
+    title: "Сон смішної людини",
+    author: "Федір Достоєвський",
+    rating: 7.75,
+  },
+];
+
+let totalRating = 0;
+
+for (const book of books) {
+  totalRating += book.rating;
+}
+
+const averageRating = (totalRating / books.length).toFixed(1);
+console.log(averageRating); // 8.2

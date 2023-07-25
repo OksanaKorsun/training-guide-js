@@ -610,3 +610,54 @@ console.log("Другий консоль", product);
 
 
 // Прочитати learn JS!!!!!!
+
+// const userBig = "Hello Liza";
+// // for (const user of userBig) {
+// //     console.log(user);
+// // }
+// console.log(userBig.split(' '));
+// const words = ["JavaScript", "це", "цікаво"];
+// console.log(words.join('-'));
+// console.log(words.slice(-2));
+// console.log(words.splice(0, 1));
+// console.log(words);
+// console.log(words.splice(2, 0, "new"));
+// console.log(words);
+
+// const clients = ["Mango", "Poly", "Ajax"];
+// const clientNameToFind = "Poly";
+// let message = "Клієнт з таким ім'ям відсутній в базі даних!";;
+
+// for (const client of clients) {
+//   // На кожній ітерації будемо перевіряти чи збігається елемент масиву з
+//   // іменем клієнта. Якщо збігається - записуємо в message повідомлення
+//   // про успіх і робимо break, щоб далі не шукати
+//   if (client === clientNameToFind) {
+//     message = "Клієнт з таким ім'ям є в базі даних!";
+//     break;
+//   }
+
+//   // Якщо вони не збігаються - записуємо в message повідомлення про відсутність імені
+  
+// }
+
+// console.log(message); // "Клієнт з таким ім'ям є в базі даних!"
+
+
+const globalValue = 10;
+
+console.log(globalValue); // 10
+
+function foo() {
+    console.log(globalValue); // 10
+    return globalValue;
+}
+
+for (let i = 0; i < 5; i++) {
+  console.log(globalValue); // 10
+
+  if (i === 2) {
+    console.log(globalValue); // 10
+  }
+}
+console.log(foo());

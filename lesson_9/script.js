@@ -1,3 +1,6 @@
+"use strict";
+
+
 // function declaration
 
 // foo()
@@ -362,15 +365,15 @@
 // Створіть функцію яка буде приймати 1 параметр (максимально дозволену швидкість)
 // та виводити повідомлення чи ми рухаємось з безпечною швидкістю чи перевищуємо, функція має опрацьовувати об'єкт автомобіля як this
 
-const tesla = {
-    brand: "Tesla",
-    speed: 70,
-};
+// const tesla = {
+//     brand: "Tesla",
+//     speed: 70,
+// };
 
-const audi = {
-    brand: 'Audi',
-    speed: 70,
-}
+// const audi = {
+//     brand: 'Audi',
+//     speed: 70,
+// }
 
 // function speedSensor(maxSpeed) {
 //     // if (this.speed <= maxSpeed) {
@@ -454,3 +457,131 @@ const audi = {
 // const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
 
 // const oddNumbers = numbers.filter(number => number % 2); //1 //0 //1
+
+
+
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+//     addItem(newItem) {
+        
+//      this.items.push(newItem);
+//             }
+//     removeItem(itemToRemove) {
+//         this.items = this.items.filter(item => item !== itemToRemove);
+    
+//   }
+// }
+// // Change code above this line
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// // console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// // console.log(storage.addItem("Droid"));
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// // storage.removeItem("Prolonger");
+// // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = "Манго";
+
+// console.log(dog); // { name: 'Манго', __proto__: animal }
+// console.log(animal.isPrototypeOf(dog)); // true
+// console.log(dog.hasOwnProperty("name")); // true
+// console.log(dog.name); // 'Манго'
+
+// console.log(dog.hasOwnProperty("legs")); // false
+// console.log(dog.legs); // 4
+
+
+
+// class StringBuilder {
+//   constructor(initialValue) {
+//     this.value = initialValue;
+//   }
+//   getValue () {
+//     return this.value;
+//   }
+//   padEnd(str) {
+//     this.value += str;
+//   }
+//   padStart(str) {
+//     this.value = str + this.value;
+//   }
+//   padBoth(str) {
+//       this.padStart(str);
+//       this.padEnd(str);
+//   }
+// }
+
+
+// // Change code above this line
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+// class Car {
+//   // Change code below this line
+//   static MAX_PRICE = 50000;
+//   #price;
+
+//   constructor({ price }) {
+//     this.#price = price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     if (newPrice <= Car.MAX_PRICE) {
+//     this.#price = newPrice; }
+//   }
+//   // Change code above this line
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+
+
+class Car {
+  static #MAX_PRICE = 50000;
+  // Change code below this line
+    static chec
+    kPrice(price) {
+    if (price > this.#MAX_PRICE) {
+        return "Error! Price exceeds the maximum";
+    } else {
+        return "Success! Price is within acceptable limits";
+    }
+}
+  // Change code above this line
+  constructor({ price }) {
+    this.price = price;
+  }
+}
+
+const audi = new Car({ price: 36000 });
+const bmw = new Car({ price: 64000 });
+
+console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"

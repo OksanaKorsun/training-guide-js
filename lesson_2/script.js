@@ -196,7 +196,7 @@ for (let i = 0; i < str.length; i += 1) {
 
 
 
-/***** Цикл while потрібно слідкуавти за умовою, якщо у вайлі умовою буде тру - комютер зависне *****/
+/***** Цикл while потрібно слідкуавти за умовою, якщо у вайлі умовою буде тру - компютер зависне *****/
 // const str = 'hello world';
 // let i = 0;
 // while (i < str.length) {
@@ -265,6 +265,7 @@ for (let i = 0; i < str.length; i += 1) {
 // 2 - yellow, action ready
 // 3 - green, action go
 // 4 - Будь-який інший колір або значення відповідно світлофор не працює, action be careful
+
 
 
 // let message = prompt('color ?');
@@ -413,26 +414,61 @@ for (let i = 0; i < str.length; i += 1) {
 // Task - 5
 // Порахуй скільки голосних літер у реченні.
 
-function countVowel(str) {
-    const vowels = "aeiou";
-    let counter = 0;
-    for (let i = 0; i < str.length; i += 1) {
-        if (vowels.includes(str[i].toLowerCase())) {
-            counter += 1
-        }
-    }
+// function countVowel(str) {
+//     const vowels = "aeiou";
+//     let counter = 0;
+//     for (let i = 0; i < str.length; i += 1) {
+//         if (vowels.includes(str[i].toLowerCase())) {
+//             counter += 1
+//         }
+//     }
 
-    return counter;
-}
-console.log(countVowel("HELLO WORLD")) // 3
-// console.log(countVowel("Junior Web Developer")) // 8
+//     return counter;
+// }
+// console.log(countVowel("HELLO WORLD")) // 3
+// // console.log(countVowel("Junior Web Developer")) // 8
 
 
-function checkAge(age) {
-  if (age >= 18) { // Change this line
-    return "You are an adult";
-  } 
-  return "You are a minor";
-}
-checkAge(8);
-console.log(checkAge(8));
+// function checkAge(age) {
+//   if (age >= 18) { // Change this line
+//     return "You are an adult";
+//   } 
+//   return "You are a minor";
+// }
+// checkAge(8);
+// console.log(checkAge(8));
+
+
+
+
+// const met = "Hello Liza";
+// console.log(met.slice(0, met.length));
+
+
+// const max = 10;
+// for (let i = 0; i <= max; i += 1) {
+//   console.log(`${max} % ${i} = `, max % i);
+// }
+
+// for (let i = 0; i <= 5; i += 1) {
+//   console.log(i);
+
+//   if (i === 3) {
+//     console.log("Знайшли число 3, перериваємо виконання циклу");
+//     break;
+//   }
+// }
+
+// console.log("Лог після циклу");
+
+
+
+// const number = 10;
+
+// for (let i = 0; i < number; i += 1) {
+//   if (i % 2 === 0) {
+//     continue;
+//   }
+
+//   console.log("Непарне i: ", i); // 1, 3, 5, 7, 9
+// }
