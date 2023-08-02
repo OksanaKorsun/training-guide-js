@@ -12,18 +12,19 @@ const name = 'student name';
 
 
 
-// const user = {
-//     name: 'User name',
-//     age: 28,
-//     sayHello() {
-//         console.log(`Hello my name is ${this.name}`);
-//     },
-//     getAge() {
-//         console.log(`my age ${this.age}`);
-//     }
-// }
+const user = {
+    name: 'User name',
+    age: 28,
+    sayHello() {
+        console.log(`Hello my name is ${this.name}`);
+    },
+    getAge() {
+        console.log(`my age ${this.age}`);
+    }
+}
 
-// const student = Object.create(user);
+const student = Object.create(user);
+console.log(student);
 // student.name = 'Alice';
 // console.log('student', student.getAge());
 // // console.log(student);
@@ -286,41 +287,71 @@ console.log(item.width); //get
 
 
 
-class Hero {
-    static counter = 0;
-    static addHero() {
-        this.counter += 1;
-        console.log('Кількість героїв ', this.counter);
-    }
+// class Hero {
+//     static counter = 0;
+//     static addHero() {
+//         this.counter += 1;
+//         console.log('Кількість героїв ', this.counter);
+//     }
 
-    #level;
-    constructor(name) {
-        this.name = name;
-        this.#level = 1;
-        this.health = 200;
-        Hero.addHero();
-    }
+//     #level;
+//     constructor(name) {
+//         this.name = name;
+//         this.#level = 1;
+//         this.health = 200;
+//         Hero.addHero();
+//     }
 
-    attack() {
-        console.log(`Attack with 10 damage`);
-    }
+//     attack() {
+//         console.log(`Attack with 10 damage`);
+//     }
 
-    heal() {
-        this.health += 10;
-    }
+//     heal() {
+//         this.health += 10;
+//     }
+// }
+
+// const bloodseker = new Hero('Bloodseker');
+// const bloodseker2 = new Hero('Bloodseker');
+// const bloodseker3 = new Hero('Bloodseker');
+// const bloodseker4 = new Hero('Bloodseker');
+// const bloodseker5 = new Hero('Bloodseker');
+// const bloodseker6 = new Hero('Bloodseker');
+
+// console.log(bloodseker.heal());
+// console.log(bloodseker);
+// console.log(Hero.counter);
+
+// // Codewars Практика!!!!!
+
+
+// class User {
+//   // Тіло класу
+// }
+
+// const mango = new User();
+// console.log(mango); // {}
+
+// const poly = new User();
+// console.log(poly); // {}
+
+
+class User {
+  // Синтаксис оголошення методу класу
+  constructor(name, email) {
+    // Ініціалізація властивостей екземпляра
+    this.name = name;
+    this.email = email;
+  }
 }
 
-const bloodseker = new Hero('Bloodseker');
-const bloodseker2 = new Hero('Bloodseker');
-const bloodseker3 = new Hero('Bloodseker');
-const bloodseker4 = new Hero('Bloodseker');
-const bloodseker5 = new Hero('Bloodseker');
-const bloodseker6 = new Hero('Bloodseker');
+const mango = new User("Манго", "mango@mail.com");
+console.log(mango); // { name: 'Манго', email: 'mango@mail.com' }
 
-console.log(bloodseker.heal());
-console.log(bloodseker);
-console.log(Hero.counter);
+const poly = new User("Поли", "poly@mail.com");
+console.log(poly); // { name: 'Поли', email: 'poly@mail.com' }
 
-
-
-// Codewars Практика!!!!!
+// Поліморфізм???
+// сокети для батлу у грі? більш продвинутий рівень
+// Фреймворк піксі джіес відповідає за розробку ігор на джіес
+// тайп скріпт - це той самий джіес зі строгою типізацією

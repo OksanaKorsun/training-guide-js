@@ -251,12 +251,19 @@
 
 // Task-6
 // Напишіть функцію, яка використовує перебираючі методи масиву map та filter, щоб отримати масив назв продуктів, ціна яких менше 2 доларів та відсортуй їх за алфавітним порядком.
-// const products = [
-//     { id: 2, name: 'Banana', price: 0.99 },
-//     { id: 1, name: 'Apple', price: 1.99 },
-//     { id: 3, name: 'Orange', price: 2.49 },
-//     { id: 4, name: 'Grapes', price: 3.99 }
-// ];
+const products = [
+    { id: 2, name: 'Banana', price: 0.99 },
+    { id: 1, name: 'Apple', price: 1.99 },
+    { id: 3, name: 'Orange', price: 2.49 },
+    { id: 4, name: 'Grapes', price: 3.99 }
+];
+// function getSorted(arr) {
+//   return arr.sort((a, b) => a.name.localeCompare(b.name))
+//     .filter(({ price }) => price < 2)
+//     .map(({ name }) => name);
+//  }
+// console.log(getSorted(products));
+// console.log(products);
 
 // function getProducts(arr) {
 //     // const min = arr.filter((product) => product.price < 2);
@@ -283,6 +290,29 @@ const str = 'absdabsrgbadgtdswwbetflg';
 //     s: 3,
 //     // ...
 // }
+
+const obj = str.split('').reduce((acc, item) => {
+  if (acc.hasOwnProperty(item)) {
+    acc[item] += 1
+  } else {
+    acc[item] = 1
+  } return acc;
+}, {})
+
+console.log(obj);
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const obj = str.split('')
 //     .reduce((acc, item) => {
 //         if (acc.hasOwnProperty(item)) { // item in acc
@@ -695,9 +725,9 @@ users = [
 
 
 
-const getTotalBalanceByGender = (users, gender) => {
-    return [...users].filter(user => user.gender === gender)
-        // .reduce((total, user) => {total + user.balance}, 0)
-};
-getTotalBalanceByGender(users, female);
-console.log(getTotalBalanceByGender(users, female));
+// const getTotalBalanceByGender = (users, gender) => {
+//     return [...users].filter(user => user.gender === gender)
+//         // .reduce((total, user) => {total + user.balance}, 0)
+// };
+// getTotalBalanceByGender(users, female);
+// console.log(getTotalBalanceByGender(users, female));

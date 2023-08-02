@@ -38,7 +38,13 @@
 
 // arrow
 
+// this може існувати тількі в середині функції і якщо значення властивості обєкту задати this,
+// він буде посилатися на глобальний обєкт Window або з 'use strict' (суровий режим) type = "module" - на undefined
+// arrow function або глобальний this - "use strict" не опрацьовує, лише type = "module"
+// якщо ми будемо вживати this в рамках function declaretion він відповідно буде посилатися на Window або 
+// при наявності строгого режиму на undefined
 
+// delete оператор
 // const obj = {
 //     name: 'Test name',
 //     hello() {
@@ -486,13 +492,13 @@
 // // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
 
-// const animal = {
-//   legs: 4,
-// };
-// const dog = Object.create(animal);
-// dog.name = "Манго";
+const animal = {
+  legs: 4,
+};
+const dog = Object.create(animal);
+dog.name = "Манго";
 
-// console.log(dog); // { name: 'Манго', __proto__: animal }
+console.log(dog); // { name: 'Манго', __proto__: animal }
 // console.log(animal.isPrototypeOf(dog)); // true
 // console.log(dog.hasOwnProperty("name")); // true
 // console.log(dog.name); // 'Манго'
@@ -563,25 +569,29 @@
 
 
 
-class Car {
-  static #MAX_PRICE = 50000;
-  // Change code below this line
-    static chec
-    kPrice(price) {
-    if (price > this.#MAX_PRICE) {
-        return "Error! Price exceeds the maximum";
-    } else {
-        return "Success! Price is within acceptable limits";
-    }
-}
-  // Change code above this line
-  constructor({ price }) {
-    this.price = price;
-  }
-}
+// class Car {
+//   static #MAX_PRICE = 50000;
+//   // Change code below this line
+//     static chec
+//     kPrice(price) {
+//     if (price > this.#MAX_PRICE) {
+//         return "Error! Price exceeds the maximum";
+//     } else {
+//         return "Success! Price is within acceptable limits";
+//     }
+// }
+//   // Change code above this line
+//   constructor({ price }) {
+//     this.price = price;
+//   }
+// }
 
-const audi = new Car({ price: 36000 });
-const bmw = new Car({ price: 64000 });
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
 
-console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
-console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+
+
+// next js - що це???
