@@ -1,19 +1,19 @@
-// const elements = {
-//     clickMe: document.querySelector('.js-click'),
-//     box: document.querySelector('.js-box'),
-//     query: document.querySelector('.js-query'),
-//     form: document.querySelector('.js-form')
-// }
+const elements = {
+    clickMe: document.querySelector('.js-click'),
+    box: document.querySelector('.js-box'),
+    query: document.querySelector('.js-query'),
+    form: document.querySelector('.js-form')
+}
 
-// elements.clickMe.addEventListener('click', handlerClick);
+elements.clickMe.addEventListener('click', handlerClick);
 // elements.box.addEventListener('click', handlerClick);
 
-// let step = 0;
-// function handlerClick() {
-//     step += 50;
-//     elements.box.style.marginTop = `${step}px`;
-//     elements.box.style.marginLeft = `${step}px`;
-// }
+let step = 0;
+function handlerClick() {
+    step += 50;
+    elements.box.style.marginTop = `${step}px`;
+    elements.box.style.marginLeft = `${step}px`;
+}
 
 
 // function handlerClick(evt) {
@@ -24,11 +24,12 @@
 
 
 
-// elements.query.addEventListener('input', handlerSearch);
-// // elements.query.addEventListener('blur', handlerSearch);
+// elements.query.addEventListener('input', handlerSearch); викликається після кожного натиснення
+// подія ченж викликається коли ви втратили фокус
+// // elements.query.addEventListener('blur', handlerSearch); фактично той самий ченж
 
 // function handlerSearch(evt) {
-//     console.dir(evt.currentTarget);
+//     console.dir(evt.currentTarget); відкриває у вигляді обєкту
 //     console.dir(evt.currentTarget.value);
 // }
 
@@ -97,7 +98,9 @@
 // function handler(evt) {
 //     console.log(evt);
 // }
-
+// ліва клавіша міші - баттон 0,
+//права клавіша миші - баттон 2,
+//колесо - баттон 1
 
 
 // const cars = [
@@ -168,12 +171,14 @@
 
 //     const result = cars.filter((item) => item[options.value].toLowerCase().includes(query.value.toLowerCase()))
 //         .sort((a, b) => a[options.value].localeCompare(b[options.value]));
-
+// використовуємо чейнінг
 //     elements.container.innerHTML = createMarkup(result);
 // }
 
 
-
+// Бібліотека - це набір якихось методів які між собою логічно ніяк не повязані
+// Фреймворк - це вже певна екосистема, методи можуть бути логічно повязані на результаті виконання одного метода
+// може викликатися інший (React, Next)
 
 
 

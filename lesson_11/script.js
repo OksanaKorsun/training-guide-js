@@ -1,3 +1,4 @@
+// Відображення контенту - textContent
 // const title = document.querySelector('h1');
 // const title = document.querySelector('.js-title');
 // const title = document.querySelector('#title')
@@ -5,17 +6,17 @@
 // console.log(title);
 
 
-// const items = document.querySelectorAll('.js-item')
+// const items = document.querySelectorAll('.js-item') повертає неживий масив адо статичну колекцію
 // console.log(items);
-// console.log([...items]);
-// console.log(Array.from(items));
+// console.log([...items]); spread  спосіб перетворення псевдомасива в масив в ES6
+// console.log(Array.from(items)); spread  спосіб перетворення псевдомасива в масив  до ES6
 
 
 // const title = document.getElementById('title');
 // console.log(title);
 
 
-// const items2 = document.getElementsByClassName('js-title')
+// const items2 = document.getElementsByClassName('js-title') повертає живий масив або динамічну колекцію
 // console.log(items2);
 
 
@@ -23,8 +24,10 @@
 // const list = document.querySelector('.js-list')
 
 // const li = document.createElement('li');
+// // застарілий метод створення елементів, створює елемент в джі ес у вигляді обєкту,
+// //який потрибно наповнити і помістити в HTML
 // const h2 = document.createElement('h2')
-// li.append(h2)
+// li.append(h2) 
 // li.textContent = 5;
 // li.classList.add('js-item');
 // const li2 = document.createElement('li');
@@ -39,17 +42,18 @@
 // console.dir(li);
 
 // const list = document.querySelector('.js-list')
-// const li = `<li class="js-item">5</li>`;
+// const li = `<li class="js-item">5</li>`; HTML подібний синтаксис створення нових елементів
 
 
-// list.insertAdjacentHTML('beforeend',li)
-// list.innerHTML = ''
+// list.insertAdjacentHTML('beforeend',li) якщо до існуючої розмітки потрібно додати елемент
+// list.innerHTML = '' повністю очистимо всю розмітку, якщо задамо властивості innerHTML пустий рядок  
+//не додає розмітку, а повністю перемальовує
 
 
 
 
 // const items = document.querySelectorAll('.js-item')
-// const items2 = document.getElementsByClassName('js-item')
+// const items2 = document.getElementsByClassName('js-item') інфініті прокрутка (безкінечна прокрутка)
 // const list = document.querySelector('.js-list');
 
 // console.log('static', items);
@@ -78,20 +82,21 @@
 
 
 
-// Перерва до 21.15
+// Перерва до 21.15 Інлайнові стилі, їх краще уникати тому що все буде перемальовуватися по рядочку 
 
 // const list = document.querySelector('.js-list');
 
 // list.style.listStyle = 'none';
 // list.style.display = 'flex';
 
-
-
+// Елементи комунікації (input, textarea, select) - value
 // const input = document.querySelector('.js-query');
 // input.value = 'Hello world';
 // // input.value = 'Hello world';
 // console.dir(input);
 
+
+// Атрибути (вбудовані та дата атрибути) атрибут alt використовується скрінрідерами
 // const btn = document.querySelector('.js-btn');
 // btn.hidden = true;
 // btn.hidden = false;
@@ -100,6 +105,11 @@
 // btn.setAttribute('hidden', true );
 // btn.removeAttribute('hidden');
 // console.log(btn.getAttribute('hidden'));
+
+
+
+// elem.attributes
+
 
 // btn.setAttribute('data-id', 24)
 // btn.setAttribute('data-goods-id', 2)
@@ -325,7 +335,7 @@
 // }
 // console.log(cars.length);
 // const list = document.querySelector('.js-list')
-
+// Приклад неправильного написання коду
 // function createMarkup(arr) {
 //     const markup = arr.map(({ model, type, price, img }) => {
 //         const li = document.createElement('li');
@@ -342,18 +352,23 @@
 //         h3.textContent = type;
 //         span.textContent = price;
 
-//         li.append(imgEl, h2, h3, span);
+//         li.append(imgEl, h2, h3, span); поки наша лішка є в аштіемель, але її немає в Домі
 
 //         return li;
 //     })
 //     console.log(markup);
 
-//     list.append(...markup)
+//     list.append(...markup); 
 // }
+
+// розпилюємо лішки нашого масиву за допомогою спреда, притримуємося такої анотації, 
+// що всі елементи повинні бути поміщені в Дом за одну операцію
+// в метода map операція forEach + push працює під капотом
+
 
 // createMarkup(cars)
 
-
+// Розмітка на сьогоднішній день за допомогою шаблонних рядків
 // const list = document.querySelector('.js-list');
 // // {
 // //     model: "Honda",
@@ -368,6 +383,7 @@
 //         <h3>${type}</h3>
 //         <span>${price}</span>
 //   </li>`).join('')
+// join - для того щоб зробити з мвсива рядок, тому що метод insertAdjacentHTML приймає рядок як другий параметр
 
 //     list.insertAdjacentHTML('beforeend', markup)
 //     console.log(markup);
@@ -399,80 +415,80 @@
 
 
 
-(function (e) {
-    'function' != typeof e.matches &&
-        (e.matches =
-            e.msMatchesSelector ||
-            e.mozMatchesSelector ||
-            e.webkitMatchesSelector ||
-            function (e) {
-                for (
-                    var t = this,
-                    o = (t.document || t.ownerDocument).querySelectorAll(e),
-                    n = 0;
-                    o[n] && o[n] !== t;
+// (function (e) {
+//     'function' != typeof e.matches &&
+//         (e.matches =
+//             e.msMatchesSelector ||
+//             e.mozMatchesSelector ||
+//             e.webkitMatchesSelector ||
+//             function (e) {
+//                 for (
+//                     var t = this,
+//                     o = (t.document || t.ownerDocument).querySelectorAll(e),
+//                     n = 0;
+//                     o[n] && o[n] !== t;
 
-                )
-                    ++n;
-                return Boolean(o[n]);
-            }),
-        'function' != typeof e.closest &&
-        (e.closest = function (e) {
-            for (var t = this; t && 1 === t.nodeType;) {
-                if (t.matches(e)) return t;
-                t = t.parentNode;
-            }
-            return null;
-        });
-})(window.Element.prototype);
+//                 )
+//                     ++n;
+//                 return Boolean(o[n]);
+//             }),
+//         'function' != typeof e.closest &&
+//         (e.closest = function (e) {
+//             for (var t = this; t && 1 === t.nodeType;) {
+//                 if (t.matches(e)) return t;
+//                 t = t.parentNode;
+//             }
+//             return null;
+//         });
+// })(window.Element.prototype);
 
-document.addEventListener('DOMContentLoaded', function () {
-    var modalButtons = document.querySelectorAll('.js-open-modal'),
-        overlay = document.querySelector('#overlay-modal-1'),
-        closeButtons = document.querySelectorAll('.js-modal-close');
+// document.addEventListener('DOMContentLoaded', function () {
+//     var modalButtons = document.querySelectorAll('.js-open-modal'),
+//         overlay = document.querySelector('#overlay-modal-1'),
+//         closeButtons = document.querySelectorAll('.js-modal-close');
 
-    modalButtons.forEach(function (item) {
-        item.addEventListener('click', function (e) {
-            e.preventDefault();
+//     modalButtons.forEach(function (item) {
+//         item.addEventListener('click', function (e) {
+//             e.preventDefault();
 
-            var modalId = this.getAttribute('data-modal'),
-                modalElem = document.querySelector(
-                    '.modal-1[data-modal="' + modalId + '"]'
-                );
+//             var modalId = this.getAttribute('data-modal'),
+//                 modalElem = document.querySelector(
+//                     '.modal-1[data-modal="' + modalId + '"]'
+//                 );
 
-            modalElem.classList.add('active-1');
-            overlay.classList.add('active-1');
-            document.body.classList.add('active-1');
-        });
-    });
+//             modalElem.classList.add('active-1');
+//             overlay.classList.add('active-1');
+//             document.body.classList.add('active-1');
+//         });
+//     });
 
-    closeButtons.forEach(function (item) {
-        item.addEventListener('click', function (e) {
-            var parentModal = this.closest('.modal-1');
+//     closeButtons.forEach(function (item) {
+//         item.addEventListener('click', function (e) {
+//             var parentModal = this.closest('.modal-1');
 
-            parentModal.classList.remove('active-1');
-            overlay.classList.remove('active-1');
-            document.body.classList.remove('active-1');
-        });
-    });
+//             parentModal.classList.remove('active-1');
+//             overlay.classList.remove('active-1');
+//             document.body.classList.remove('active-1');
+//         });
+//     });
 
-    document.body.addEventListener(
-        'keyup',
-        function (e) {
-            var key = e.keyCode;
+//     document.body.addEventListener(
+//         'keyup',
+//         function (e) {
+//             var key = e.keyCode;
 
-            if (key == 27) {
-                document.querySelector('.modal.active-1').classList.remove('active-1');
-                document.querySelector('.overlay-1').classList.remove('active-1');
-                document.body.classList.remove('active-1');
-            }
-        },
-        false
-    );
+//             if (key == 27) {
+//                 document.querySelector('.modal.active-1').classList.remove('active-1');
+//                 document.querySelector('.overlay-1').classList.remove('active-1');
+//                 document.body.classList.remove('active-1');
+//             }
+//         },
+//         false
+//     );
 
-    overlay.addEventListener('click', function () {
-        document.querySelector('.modal.active-1').classList.remove('active-1');
-        this.classList.remove('active-1');
-        document.body.classList.remove('active-1');
-    });
-});
+//     overlay.addEventListener('click', function () {
+//         document.querySelector('.modal.active-1').classList.remove('active-1');
+//         this.classList.remove('active-1');
+//         document.body.classList.remove('active-1');
+//     });
+// });
