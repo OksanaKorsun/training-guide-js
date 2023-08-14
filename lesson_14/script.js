@@ -1,6 +1,8 @@
 
 // ******************************Lazy Loading****************************** \\
-
+https://caniuse.com - дивимося які браузери підтримують дану технологію
+// Бібліотека lodash та cdn - більше історична річ
+// На сьогоднішній день використовують npm
 // Тестовий масив для lazy-loading
 const cats = [
     "https://i.ytimg.com/vi/iKA6ZXpGcGQ/maxresdefault.jpg",
@@ -124,7 +126,7 @@ function createMarkup() {
     }
     container.innerHTML = markup;
 }
-createMarkup()
+createMarkup();
 container.addEventListener('click', handlerClick);
 
 
@@ -134,6 +136,7 @@ function handlerClick(evt) {
     }
 
     const itemId = Number(evt.target.dataset.id);
+    // const itemId = +evt.target.dataset.id; - унарний плюс;
     let result = false;
 
     if (player === 'X') {
@@ -179,11 +182,11 @@ function restart() {
 }
 
 
-const value = {
-    numbers: {
-        one: 1
-    }
-}
+// const value = {
+//     numbers: {
+//         one: 1
+//     }
+// }
 
-console.log(value.numbers?.one);
-console.log(value.string?.one);
+// console.log(value.numbers?.one);
+// console.log(value.string?.one);

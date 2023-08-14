@@ -1,13 +1,14 @@
 // https://youtu.be/-_0dD2shabQ
 // http://xn--80adth0aefm3i.xn--j1amh/%D0%BF%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%8F/21
 
+// в html спочатку підключаємо бібліотеку, а потім наш скрипт js
 
 // const container = document.querySelector('.js-container');
 // // const box = document.querySelector('.js-box')
 // [...container.children].forEach((box) => {
 //     box.addEventListener('click', handlerClick)
 // })
-
+// на події клік - прийнято використовувати патерн делегування подій
 // function handlerClick(evt) {
 //     console.log(evt.currentTarget);
 // }
@@ -137,7 +138,10 @@
 
 // const container = document.querySelector('.js-products');
 
-// container.insertAdjacentHTML('beforeend', createMarkup(products));
+// container.insertAdjacentHTML('beforeend', createMarkup(products)); 
+// insertAdjacentHTML - швидший ніж innerHTML і не перезаписує розмітку, він її просто додає
+// innerHTML - досить небезпечний метод
+// дата атрибут завжди додають на спільний елемент, як правило на li
 // container.addEventListener('click', handlerProductClick)
 
 // function createMarkup(arr) {
@@ -156,7 +160,9 @@
 //     if (evt.target === evt.currentTarget) {
 //         return;
 //     }
-
+// метод closest(selector) - дозволяє при кліку на html елемент дістатись до першого його спільного батька
+// за якимось класом, назвою тега або індетифікатором
+// властивість dataset завжди повертає рядочок, а нам потрібно число - тому робимо приведення даних
 //     const currentProduct = evt.target.closest('.js-product-item');
 //     const  id  = currentProduct.dataset.id;
 //     const product = products.find(({ id: productId }) => productId === Number(id))
