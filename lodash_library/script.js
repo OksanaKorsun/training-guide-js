@@ -194,23 +194,26 @@ let result;
 //  * @param {*} value2 
 //  * @returns 
 //  */
-function basicOp(operation, value1, value2) {
-  switch (operation) {
-    case '+':
-      result = value1 + value2;
-      break;
-    case '-':
-      result = value1 - value2;
-      break;
-    case '*':
-      result = value1 * value2;
-      break;
-    default:
-      result = value1 / value2;
-  }
-  return result;
-}
-basicOp('-', 15, 18);
-console.log(basicOp('-', 15, 18));
-basicOp('/', 49, 7);
-console.log(basicOp('/', 49, 7));
+// function basicOp(operation, value1, value2) {
+//   switch (operation) {
+//     case '+':
+//       result = value1 + value2;
+//       break;
+//     case '-':
+//       result = value1 - value2;
+//       break;
+//     case '*':
+//       result = value1 * value2;
+//       break;
+//     default:
+//       result = value1 / value2;
+//   }
+//   return result;
+// }
+// basicOp('-', 15, 18);
+// console.log(basicOp('-', 15, 18));
+// basicOp('/', 49, 7);
+// console.log(basicOp('/', 49, 7));
+
+
+//  
