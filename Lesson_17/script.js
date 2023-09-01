@@ -3,6 +3,11 @@
 // https://bool.dev/blog/detail/obyasnenie-event-loop-v-javascript-s-pomoshchyu-vizualizatsii
 // https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif
 
+
+// Використовуючи синхронний та асинхронний код - синхронний завжди буде в приорітеті
+// В нативному JS немає асинхрону
+// setTimeout, setInterval - це все приклад web API
+
 // ***********setTimeout*********** \\
 
 // const id = setTimeout(() => {
@@ -160,28 +165,123 @@
 //   return value.toString().padStart(2, "0");
 // }
 
-const form = document.querySelector(".feedback-form");
-const KEY_LS = "feedback-form-state";
+// const form = document.querySelector(".feedback-form");
+// const KEY_LS = "feedback-form-state";
 
-form.addEventListener("input", handlerInput);
-form.addEventListener("submit", handlerSubmit);
+// form.addEventListener("input", handlerInput);
+// form.addEventListener("submit", handlerSubmit);
 
-let data = JSON.parse(localStorage.getItem(KEY_LS)) ?? {};
-const { email, message } = form.elements;
+// let data = JSON.parse(localStorage.getItem(KEY_LS)) ?? {};
+// const { email, message } = form.elements;
 
-email.value = data.email ?? "";
-message.value = data.message ?? "";
+// email.value = data.email ?? "";
+// message.value = data.message ?? "";
 
-function handlerInput(evt) {
-  data[evt.target.name] = evt.target.value;
-  localStorage.setItem(KEY_LS, JSON.stringify(data));
-}
+// function handlerInput(evt) {
+//   data[evt.target.name] = evt.target.value;
+//   localStorage.setItem(KEY_LS, JSON.stringify(data));
+// }
 
-function handlerSubmit(evt) {
-  evt.preventDefault();
-  console.log(data);
+// function handlerSubmit(evt) {
+//   evt.preventDefault();
+//   console.log(data);
 
-  form.reset();
-  data = {};
-  localStorage.removeItem(KEY_LS);
-}
+//   form.reset();
+//   data = {};
+//   localStorage.removeItem(KEY_LS);
+// }
+
+
+// const date = new Date();
+// console.log("Date: ", date);
+
+// // Повертає день місяця від 1 до 31
+// console.log("getDate(): ", date.getDate());
+
+// // Повертає день тижня від 0 до 6
+// console.log("getDay(): ", date.getDay());
+
+// // Повертає місяць від 0 до 11
+// console.log("getMonth(): ", date.getMonth());
+
+// // Повертає рік з 4 цифр
+// console.log("getFullYear(): ", date.getFullYear());
+
+// // Повертає години
+// console.log("getHours(): ", date.getHours());
+
+// // Повертає хвилини
+// console.log("getMinutes(): ", date.getMinutes());
+
+// // Повертає секунди
+// console.log("getSeconds(): ", date.getSeconds());
+
+// // Повертає мілісекунди
+// console.log("getMilliseconds(): ", date.getMilliseconds());
+
+
+// const date = new Date();
+// console.log("Date: ", date);
+
+// // Повертає день місяця від 1 до 31
+// console.log("getUTCDate(): ", date.getUTCDate());
+
+// // Повертає день тижня від 0 до 6
+// console.log("getUTCDay(): ", date.getUTCDay());
+
+// // Повертає місяць від 0 до 11
+// console.log("getUTCMonth(): ", date.getUTCMonth());
+
+// // Повертає рік з 4 цифр
+// console.log("getUTCFullYear(): ", date.getUTCFullYear());
+
+// // Повертає години
+// console.log("getUTCHours(): ", date.getUTCHours());
+
+// // Повертає хвилини
+// console.log("getUTCMinutes(): ", date.getUTCMinutes());
+
+// // Повертає секунди
+// console.log("getUTCSeconds(): ", date.getUTCSeconds());
+
+// // Повертає мілісекунди
+// console.log("getUTCMilliseconds(): ", date.getUTCMilliseconds());
+
+
+// const date = new Date("March 16, 2030 14:25:00");
+// console.log(date);
+// date.setMinutes(50);
+// // "Sat Mar 16 2030 14:50:00 GMT+0200"
+// console.log(date);
+// date.setFullYear(2040, 4, 8);
+// // "Tue May 08 2040 14:50:00 GMT+0300"
+// console.log(date);
+
+
+const date = new Date("March 16, 2030 14:25:00");
+
+date.toString();
+// "Sat Mar 16 2030 14:25:00 GMT+0200 (Eastern European Standard Time)"
+
+date.toTimeString();
+// "14:25:00 GMT+0200 (Eastern European Standard Time)"
+
+date.toLocaleTimeString();
+// "2:25:00 PM"
+
+date.toUTCString();
+// "Sat, 16 Mar 2030 12:25:00 GMT"
+
+date.toDateString();
+// "Sat Mar 16 2030"
+
+date.toISOString();
+// "2030-03-16T12:25:00.000Z"
+
+date.toLocaleString();
+// "3/16/2030, 2:25:00 PM"
+
+date.getTime();
+// 1899894300000
+
+console.log(null >= 0);

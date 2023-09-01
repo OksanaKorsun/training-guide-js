@@ -46,6 +46,7 @@
 // export {sum as sumAdd} from './home/helpers/add'
 // переміщення рядків - option + cтрілочка вгору/вниз
 // скопіювати - дабл клік + command C
+// патерни проектування ????
 
 
 // const result = _.add(2, 3);
